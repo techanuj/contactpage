@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width", initail-scale="1.0">
+        <title>Tech Anuj Contact Page</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <form>
+            <h3>Tech Anuj Contact Page</h3>
+            <input type="text" id="name" placeholder="Your Name">
+            <input type="email" id="email" placeholder="Email Id">
+            <input type="text" id="phone" placeholder="Phone No.">
+            <textarea id="massage" rows="4" placeholder="How can we help you?"></textarea>
+            <button type="submit" onclick="sendemail">Send</button>
+        </form>
+            </div>
+            <script src="https://smtpjs.com/v3/smtp.js"></script>
+            <script>
+                function sendemail(){
+                    Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "anujb923@gmail.com",
+    Password : "DBBFA5D24F8982AE51E58534C305A69D55ED",
+    To : 'teamtechanuj@gmail.com',
+    From : "anujb923@gmail.com",
+    Subject : "This is the subject",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+                }
+
+            </script>
+
+    </body>
+    
+</html>
